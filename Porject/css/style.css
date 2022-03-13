@@ -492,17 +492,38 @@ a {
   }
 }
 
-/*@media screen and (min-width: 1024px) {
-  .callout {
-    display: flex;
-    text-align: left;
-    align-items: center;
-  }
-  .callout--text > p {
-    font-size: 2rem;
-  }
-  .callout--text p {
-    width: 80%;
-  }
+/*Collapsibles*/
+.collapsible {
+  padding: 2rem;
 }
-*/
+.collapsible__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.collapsible__chevron {
+  fill: #00d9ff;
+  transition: fill 0.3s;
+}
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s, opacity 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  fill: #fff;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
