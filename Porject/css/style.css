@@ -46,6 +46,7 @@ h3 {
 
 p {
   margin-top: 0;
+  font-size: 2.4rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -209,6 +210,10 @@ a {
   width: 100%;
   display: inline-block;
 }
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
 .btn--secondary {
   background-color: white;
   border: 2px solid var(--color-headings);
@@ -363,6 +368,7 @@ a {
   font-size: 3rem;
   font-style: italic;
   color: var(--color-body-darker);
+  margin: 3rem 0;
 }
 
 .quote__text::before {
@@ -447,3 +453,56 @@ a {
     margin-left: 6rem;
   }
 }
+
+/*Callouts*/
+.callout {
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  padding: 4rem;
+  color: #fff;
+}
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+.callout--text {
+  text-align: center;
+}
+.callout__heading {
+  font-size: 3rem;
+  margin-top: 0;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+  .callout--text {
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+  }
+  .callout--text > p {
+    font-size: 2rem;
+  }
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
+  }
+}
+
+/*@media screen and (min-width: 1024px) {
+  .callout {
+    display: flex;
+    text-align: left;
+    align-items: center;
+  }
+  .callout--text > p {
+    font-size: 2rem;
+  }
+  .callout--text p {
+    width: 80%;
+  }
+}
+*/
